@@ -32,7 +32,6 @@ posts.push(idea);
   response.send("thanks for your idea. Press back to add another");
 }
 app.post('/ideas', saveNewIdea);
-app.post('/ideas', )
 
 //listen for connections on port 3000
 app.listen(3000);
