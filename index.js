@@ -14,8 +14,11 @@ app.use(bodyParser.json())
 //make an empty list of ideas
 var posts = [];
 var idea = {};
-idea.text = "Two cats who solve crimes in Dunedin";
+
+idea.text = "Buy 2 oreo get 1 free!";
+idea.price = "Only $100";
 idea.image = "http://www.farmlib.org/wp-content/uploads/2016/03/oreo_cookie_ima.d144b164022.original1.jpg";
+
 posts.push(idea);
 
 //let a client GET the list of ideas
@@ -27,15 +30,22 @@ app.get('/ideas', sendIdeasList);
 //let a client POST new ideas
 var saveNewIdea = function (request, response) {
   console.log(request.body.idea);
+<<<<<<< HEAD
   console.log(request.body.image); //write it on the command prompt so we can see
   var idea = {};
 idea.text = request.body.idea;
 idea.image = request.body.image;
+=======
+  console.log(request.body.price); //write it on the command prompt so we can see
+  var idea = {};
+idea.text = request.body.idea;
+idea.price = request.body.price;
+>>>>>>> master
 posts.push(idea);
   response.send("thanks for your idea. Press back to add another");
 }
 app.post('/ideas', saveNewIdea);
 
 //listen for connections on port 3000
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
 console.log("I am listening...");
