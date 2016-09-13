@@ -7,6 +7,10 @@
     "type": "git",
     "url": "https://github.com/girlcodeakl/template.git"
   },
+  "scripts": {
+   "test": "vows --spec --isolate",
+   "start": "node index.js"
+ },
   "author": "Girl Code",
   "license": "ISC",
   "bugs": {
