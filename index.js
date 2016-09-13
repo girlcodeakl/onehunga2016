@@ -15,6 +15,7 @@ app.use(bodyParser.json())
 var posts = [];
 var idea = {};
 idea.text = "Two cats who solve crimes in Dunedin";
+idea.image = "http://www.farmlib.org/wp-content/uploads/2016/03/oreo_cookie_ima.d144b164022.original1.jpg";
 posts.push(idea);
 
 //let a client GET the list of ideas
@@ -25,9 +26,11 @@ app.get('/ideas', sendIdeasList);
 
 //let a client POST new ideas
 var saveNewIdea = function (request, response) {
-  console.log(request.body.idea); //write it on the command prompt so we can see
+  console.log(request.body.idea);
+  console.log(request.body.image); //write it on the command prompt so we can see
   var idea = {};
 idea.text = request.body.idea;
+idea.image = request.body.image;
 posts.push(idea);
   response.send("thanks for your idea. Press back to add another");
 }

@@ -15,7 +15,7 @@
   </div>
   <form class="formclassname" method="post" action="/ideas">
     <input class="ideaInput" type="text" name="idea" placeholder="idea goes here">
-    <input type="text" name="idea" value="image goes here">
+    <input class="imageInput" type="text" name="idea" value="image goes here">
     <input type="submit" placeholder="Submit">
   </form>
 
@@ -27,6 +27,7 @@
     e.preventDefault();
     var data = {};
     data.idea = $(".ideaInput").val();
+    data.image = $(".imageInput").val();
     $.post( "/ideas" , data );
     $(".note").text("Thanks! Your idea was submitted");
 
