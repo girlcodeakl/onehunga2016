@@ -28,11 +28,8 @@
     e.preventDefault();
     var data = {};
     data.idea = $(".ideaInput").val();
-<<<<<<< HEAD
     data.image = $(".imageInput").val();
-=======
     data.price = $(".priceInput").val();
->>>>>>> master
     $.post( "/ideas" , data );
     $(".note").text("Thanks! Your idea was submitted");
 

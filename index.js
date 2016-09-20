@@ -30,17 +30,12 @@ app.get('/ideas', sendIdeasList);
 //let a client POST new ideas
 var saveNewIdea = function (request, response) {
   console.log(request.body.idea);
-<<<<<<< HEAD
-  console.log(request.body.image); //write it on the command prompt so we can see
-  var idea = {};
-idea.text = request.body.idea;
-idea.image = request.body.image;
-=======
+  console.log(request.body.image);
   console.log(request.body.price); //write it on the command prompt so we can see
   var idea = {};
 idea.text = request.body.idea;
+idea.image = request.body.image;
 idea.price = request.body.price;
->>>>>>> master
 posts.push(idea);
   response.send("thanks for your idea. Press back to add another");
 }
