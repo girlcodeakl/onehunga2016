@@ -39,7 +39,7 @@ $(post).removeClass("hidden")
 
 
 var displayIdea = function(idea) {
-  var ideaElement = $('<h2>' + idea.text + '<br>' + "price:" + "   " + idea.price + '</h2>');
+  var ideaElement = $('<h2>' + idea.text + '<br>' + "price:" + "   " + idea.price + '</h2>' + '<img src= " '+ idea.image +'">');
   $(".idea-box").append(ideaElement);
 
 }
