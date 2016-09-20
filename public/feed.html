@@ -3,7 +3,7 @@
   <head>
     <meta charset='utf-8'>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <title>Idea Feed</title>
+    <title>The house of oreos</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -17,8 +17,26 @@
     <h1 class="title">Idea Feed</h1>
     <div class="idea-box">
     </div>
+<br>
+
+    <input class="filter" type="text">
+
+
     <script>
 //Hello! This is the start of the JavaScript.
+var filterFunction = function(filter) {
+var filter = $(".filter").val();
+console.log(filter);  $(".idea-box").children().each(function(number, post) {
+  if ($(post).text().indexOf(filter)>=0){
+$(post).removeClass("hidden")
+  }else {$(post).addClass("hidden")
+
+  }
+
+  });
+}
+
+
 
 var displayIdea = function(idea) {
   var ideaElement = $('<h2>' + idea.text + '<br>' + "price:" + "   " + idea.price + '</h2>');
@@ -32,6 +50,7 @@ var createFeed = function(data) {
 
 $.get("/ideas", createFeed);
 
+$(".filter").on("keyup", filterFunction);
 
 //This is the end of the JavaScript.
     </script>
