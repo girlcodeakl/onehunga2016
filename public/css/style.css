@@ -18,6 +18,9 @@ h2 {
   border-radius: 5px;
   text-align: center;
 }
+.time  {
+  color: #36B0E2 ;
+}
 .navbar  {
     color: pink;
      background-color: #f1f1f1;
@@ -26,5 +29,5 @@ h2 {
      justify-content:space-around;
 }
 .navbar a {
-   
+
 }

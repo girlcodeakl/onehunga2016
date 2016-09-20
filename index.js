@@ -18,6 +18,7 @@ var idea = {};
 idea.text = "Buy 2 oreo get 1 free!";
 idea.price = "Only $100";
 idea.image = "http://www.farmlib.org/wp-content/uploads/2016/03/oreo_cookie_ima.d144b164022.original1.jpg";
+idea.time = new Date();
 
 posts.push(idea);
 
@@ -33,10 +34,12 @@ var saveNewIdea = function (request, response) {
   console.log(request.body.image);
   console.log(request.body.price); //write it on the command prompt so we can see
   var idea = {};
-idea.text = request.body.idea;
-idea.image = request.body.image;
-idea.price = request.body.price;
-posts.push(idea);
+
+  idea.text = request.body.idea;
+  idea.image = request.body.image;
+  idea.price = request.body.price;
+  idea.time = new Date();
+  posts.push(idea);
   response.send("thanks for your idea. Press back to add another");
 }
 app.post('/ideas', saveNewIdea);
