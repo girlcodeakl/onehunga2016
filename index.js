@@ -1,4 +1,4 @@
-//set up
+var database = null;//set up
 var express = require('express')
 var app = express();
 var bodyParser = require('body-parser')
@@ -38,9 +38,27 @@ idea.image = request.body.image;
 idea.price = request.body.price;
 posts.push(idea);
   response.send("thanks for your idea. Press back to add another");
+  var dbPosts = database.collection('posts');
+dbPosts.insert(idea);
 }
 app.post('/ideas', saveNewIdea);
 
 //listen for connections on port 3000
 app.listen(process.env.PORT || 3000);
 console.log("I am listening...");
+
+var mongodb = require('mongodb');
+var uri = 'mongodb://girlcode:hats123@ds035766.mlab.com:35766/keep-posts-when-server-restarts';
+mongodb.MongoClient.connect(uri, function(err, newdb) {
+  if(err) throw err;
+  console.log("yay we connected to the database");
+  database = newdb;
+  var dbPosts = database.collection('posts');
+  dbPosts.find(function (err, cursor) {
+    cursor.each(function (err, item) {
+      if (item != null) {
+        posts.push(item);
+      }
+    });
+  });
+});
