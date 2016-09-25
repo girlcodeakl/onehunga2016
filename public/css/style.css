@@ -28,10 +28,7 @@ h2 {
   text-align: center;
   width: 250px;
   height: 250px;
-  order: <integer>;
-  flex-grow: <number>;
-  flex-shrink: <number>;
-  align-self: auto;
+
 }
 .time  {
   color: #36B0E2 ;
