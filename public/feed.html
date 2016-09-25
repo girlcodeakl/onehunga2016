@@ -43,7 +43,7 @@ var displayIdea = function(idea) {
   if (idea.time === undefined) {
       idea.time = new Date("2016-09-01");
   }
-  var ideaElement = $('<h2>' + idea.text + '<br>' + "price:" + "   " + idea.price + "<div class='time'>" + $.format.prettyDate(idea.time) + "</div>" + '</h2>' + '<img src= " '+ idea.image +'">');
+  var ideaElement = $('<h2>' + idea.text + '<br>' + "price:" + "   " + idea.price + "<div class='time'>" + $.format.prettyDate(idea.time) + "</div>" + '<img src= " '+ idea.image +'">' + '</h2>');
   $(".idea-box").append(ideaElement);
 
 }
