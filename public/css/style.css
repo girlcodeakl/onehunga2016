@@ -40,3 +40,9 @@ img {
   margin-right: auto;
   display: block;
 }
+
+.container {
+  text-align: right;
+  padding: 10px;
+  margin: 20px;
+}
