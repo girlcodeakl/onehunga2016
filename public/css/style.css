@@ -1,5 +1,8 @@
 body {
-  color: black;
+  color: #17CBB3;
+  font-size: 30px;
+  text-align: center;
+  font-family: Futura, Trebuchet MS, Arial, sans-serif
 }
 .idea-box {
   width: 90%;
@@ -14,8 +17,8 @@ body {
 }
 h1 {
   text-align: center;
-  color: #FFB038;
-
+  color: #379488;
+  font-family: Futura, Trebuchet MS, Arial, sans-serif
 }
 
 h2 {
