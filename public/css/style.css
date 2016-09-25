@@ -21,6 +21,9 @@ h2 {
 .time  {
   color: #36B0E2 ;
 }
+.hidden {
+  display: none;
+}
 .navbar  {
     color: pink;
      background-color: #f1f1f1;
