@@ -2,21 +2,31 @@ body {
   color: black;
 }
 .idea-box {
-  background-color: #FFF0A5;
-  padding: 20px;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
 }
 h1 {
   text-align: center;
-  color: #FFB03B;
+  color: #FFB038;
+
 }
 
 h2 {
   color: #468966;
   margin: 10px;
-  padding: 10px;
   border: 2px solid #FFB03B;
   border-radius: 5px;
   text-align: center;
+  width: 250px;
+  height: 250px;
+
 }
 .time  {
   color: #36B0E2 ;
