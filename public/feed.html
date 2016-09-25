@@ -3,6 +3,7 @@
   <head>
     <meta charset='utf-8'>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.js"></script>
     <title>Trading App</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -39,7 +40,7 @@ $(post).removeClass("hidden")
 
 
 var displayIdea = function(idea) {
-  var ideaElement = $('<h2>' + idea.text + '<br>' + "price:" + "   " + idea.price + '</h2>' + '<img src= " '+ idea.image +'">');
+  var ideaElement = $('<h2>' + idea.text + '<br>' + "price:" + "   " + idea.price + "<div class='time'>" + $.format.prettyDate(idea.time) + "</div>" + '</h2>' + '<img src= " '+ idea.image +'">');
   $(".idea-box").append(ideaElement);
 
 }
